@@ -1,0 +1,108 @@
+{
+    "section_properties": [
+      {
+        "id": "viga",
+        "A": 0.01,
+        "E": 25000000.0,
+        "I": 0.004
+      },
+      {
+        "id": "tirante",
+        "A": 0.01,
+        "E": 205000000.0,
+        "I": 0.0001
+      }
+
+    ],
+    "nodes": [
+      {
+        "eqs": [18,19,20],
+        "coord": [0.0, 0.0],
+        "is_fixed": [true, true, true],
+        "presc_disp": [0.0, 0.0, 0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [0.0, 5.0],
+        "eqs": [0,1,2],
+        "is_fixed": [false, false, false],
+        "presc_disp": [0.0, 0.0, 0.0],
+        "force": [3.0, -5.0, 0.0]
+      },
+      {
+        "coord": [5.0, 5.0],
+        "eqs": [3,4,5],
+        "is_fixed": [false, false, false],
+        "presc_disp": [0.0, 0.0, 0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [8.0,5.0],
+        "eqs": [6,7,8],
+        "is_fixed": [false, false, false],
+        "presc_disp": [0.0, 0.0, 0.0],
+        "force": [0.0, -7.0, 0.0]
+      },
+      {
+        "coord": [5.0, 0.0],
+        "eqs": [16,17,15],
+        "is_fixed": [true, true, false],
+        "presc_disp": [0.0, -0.002, 0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [0.0, 3.0],
+        "eqs": [9,10,11],
+        "is_fixed": [false, false, false],
+        "presc_disp": [0.0, 0.0, 0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [5.0, 3.0],
+        "eqs": [12,13,14],
+        "is_fixed": [false, false, false],
+        "presc_disp": [0.0, 0.0, 0.0],
+        "force": [0.0, 0.0, 0.0]
+      }
+    ],
+    "elements": [
+      {
+        "type": "beam",
+        "nodes": [0,5],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [1,2],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [2,3],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [4,6],
+        "section_id": "viga"
+      },
+      {
+        "type": "truss",
+        "nodes": [5,6],
+        "section_id": "tirante"
+      },
+      {
+        "type": "beam",
+        "nodes": [5,1],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [6,2],
+        "section_id": "viga"
+      }
+
+    ],
+    "rigid body modes": [
+    ]
+  }

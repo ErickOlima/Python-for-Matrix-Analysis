@@ -1,0 +1,116 @@
+{
+    "section_properties": [
+      {
+        "id": "one",
+        "A": 0.0004,
+        "E": 205000000.0,
+        "I": 0.0001
+      }
+    ],
+    "nodes": [
+      {
+        "eqs": [10,11],
+        "coord": [0.0, 0.0],
+        "is_fixed": [true, true],
+        "presc_disp": [0.0, 0.0],
+        "force": [0.0, 0.0]
+      },
+      {
+        "coord": [3.0, 0.0],
+        "eqs": [0,1],
+        "is_fixed": [false, false],
+        "presc_disp": [0.0, 0.0],
+        "force": [0.0, -10.0]
+      },
+      {
+        "coord": [6.0, 0.0],
+        "eqs": [6,8],
+        "is_fixed": [false, true],
+        "presc_disp": [0.0, 0.0],
+        "force": [0.0, 0.0]
+      },
+      {
+        "coord": [9.0, 0.0],
+        "eqs": [7,9],
+        "is_fixed": [false, true],
+        "presc_disp": [0.0, 0.0],
+        "force": [0.0, 0.0]
+      },
+      {
+        "coord": [3.0, 3.0],
+        "eqs": [2,3],
+        "is_fixed": [false, false],
+        "presc_disp": [0.0, 0.0],
+        "force": [0.0, 0.0]
+      },
+      {
+        "coord": [6.0, 3.0],
+        "eqs": [4,5],
+        "is_fixed": [false, false],
+        "presc_disp": [0.0, 0.0],
+        "force": [-5.0, -5.0]
+      },
+      {
+        "coord": [9.0, 3.0],
+        "eqs": [12,13],
+        "is_fixed": [true, true],
+        "presc_disp": [0.0, 0.0],
+        "force": [0.0, 0.0]
+      }
+    ],
+    "elements": [
+      { "type": "truss",
+        "nodes": [0,1],
+        "cargas":[0,0,0,0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [1,2],
+        "cargas":[0,0,0,0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [2,3],
+        "cargas":[0,0,0,0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [0,4],
+        "cargas":[0,0,0,0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [1,4],
+        "cargas":[0,0,0,0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [4,2],
+        "cargas":[-15.0,-15.0,-15.0,-15.0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [5,3],
+        "cargas":[0,0,0,0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [4,5],
+        "cargas":[0,-15.0,0,-15.0],
+        "section_id": "one"
+      },
+      { "type": "truss",
+        "nodes": [5,6],
+        "cargas":[0,-15.0,0,-15.0],
+        "section_id": "one"
+      }
+
+    ],
+    "rigid body modes": [
+        [1,0,1,0,1,0,1,1,0,0,1,0,1,0],
+        [0,1,0,1,0,1,0,0,1,1,0,1,0,1],
+        [0,3,-3,3,-3,6,0,0,6,9,0,0,-3,9],
+        [0,0,0,0,0,0,0,0,0,0,0,0,0,3],
+        [0,0,0,0,0,3,0,0,0,3,0,0,0,3]
+    ]
+  }

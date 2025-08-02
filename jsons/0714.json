@@ -1,0 +1,57 @@
+{
+    "section_properties": [
+      {
+        "id": "viga",
+        "A": 0.01,
+        "E": 1000.0,
+        "I": 1.0
+      }
+      ],
+
+    "nodes": [
+      {"index": 0,
+        "coord": [0.0, 0.0, 0.0],
+        "eqs": [0,6,1],
+        "is_fixed": [false, true,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {"index": 1,
+        "coord": [0.0, 2.0, 0.0],
+        "eqs": [2,3,4],
+        "is_fixed": [false, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+    
+      {"index": 2,
+        "coord": [3.0, 0.0, 0.0],
+        "eqs": [7,8,5],
+        "is_fixed": [true, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      }
+    
+    ],
+    
+    "elements": [
+      {"index": 0,
+        "type": "beam",
+        "nodes": [0,1],
+        "section_id": "viga",
+        "cargas": [0, -2.5, -2.5,0.0, -2.5, 2.5],
+        "normal": 1.0
+      },
+       {"index": 1,
+        "type": "beam",
+        "nodes": [1,2],
+        "section_id": "viga",
+        "cargas": [0.0,0.0,0.0, 0.0, 0.0, 0.0],
+        "normal": 1.0
+      }
+    ],
+    "rigid body modes": [
+    ]
+  }
+
+  

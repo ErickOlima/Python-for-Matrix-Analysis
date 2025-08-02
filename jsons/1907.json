@@ -1,0 +1,67 @@
+{
+    "section_properties": [
+      {
+        "id": "viga",
+        "A": 0.01,
+        "E": 20000.0,
+        "I": 0.01
+      },
+      {
+        "id": "tirante",
+        "A": 0.01,
+        "E": 20000.0,
+        "I": 0.01
+      }
+    ],
+    "nodes": [
+      {"index": 0,
+        "coord": [0.0, 0.0,0.0],
+        "eqs": [0,1],
+        "is_fixed": [false, false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [1.0, 0.0, 0.0]
+      },
+      {"index": 1,
+        "coord": [3.0, 0.0, 0.0],
+        "eqs": [3,2],
+        "is_fixed": [true, false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {"index": 2,
+        "coord": [3.0, 4.0, 0.0],
+        "eqs": [4,5],
+        "is_fixed": [true, true],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      }
+
+    
+    ],
+    
+    "elements": [
+      {"index": 0,
+        "type": "truss",
+        "nodes": [0,1],
+        "section_id": "tirante",
+        "cargas": [0, 0, 0, 0, 0, 0],
+        "normal": -1.0
+      },
+      {"index": 1,
+        "type": "truss",
+        "nodes": [1,2],
+        "section_id": "tirante",
+        "cargas": [0, 0, 0, 0, 0, 0],
+        "normal": 0.0
+      },
+      {"index": 2,
+        "type": "truss",
+        "nodes": [0,2],
+        "section_id": "tirante",
+        "cargas": [0, 0, 0, 0, 0, 0],
+        "normal": 0.0
+      }
+    ],
+    "rigid body modes": [
+    ]
+  }

@@ -1,0 +1,90 @@
+{
+    "section_properties": [
+      {
+        "id": "viga",
+        "A": 0.2,
+        "E": 200000.0,
+        "I": 0.00002
+      },
+      {
+        "id": "tirante",
+        "A": 0.01,
+        "E": 205000000.0,
+        "I": 0.0001
+      }
+    ],
+    "nodes": [
+      {
+        "coord": [0.0, 4.0,0.0],
+        "eqs": [0,1,2],
+        "is_fixed": [false, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, -3.0, 0.0]
+      },
+      {
+        "coord": [2.0, 4.0, 0.0],
+        "eqs": [3,4,5],
+        "is_fixed": [false, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [5.0, 4.0, 0.0],
+        "eqs": [6,7,8],
+        "is_fixed": [false, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [2.0, 2.0, 0.0],
+        "eqs": [9,10,11],
+        "is_fixed": [false, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      },
+      {
+        "coord": [3.0, 2.0, 0.0],
+        "eqs": [12,13,14],
+        "is_fixed": [false, false,false],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [-1.0, -1.0, 0.0]
+      },
+      {
+        "coord": [2.0, 0.0, 0.0],
+        "eqs": [15,16,17],
+        "is_fixed": [true, true,true],
+        "presc_disp": [0.0, 0.0,0.0],
+        "force": [0.0, 0.0, 0.0]
+      }
+    ],
+    "elements": [
+      {
+        "type": "beam",
+        "nodes": [0,1],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [1,2],
+        "section_id": "viga",
+        "cargas": [0, 4.0, 0.2,0.0, 0.0, 0.0]
+      },
+      {
+        "type": "beam",
+        "nodes": [3,1],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [3,4],
+        "section_id": "viga"
+      },
+      {
+        "type": "beam",
+        "nodes": [5,3],
+        "section_id": "tirante"
+      }
+    ],
+    "rigid body modes": [
+    ]
+  }
